@@ -1,0 +1,158 @@
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tło strony głównej */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #000; /* Tło strony czarne */
+    height: 100vh; /* Wysokość body na 100% widocznego obszaru */
+    overflow: hidden; /* Domyślnie blokujemy przewijanie */
+}
+
+/* Kontener na logo */
+#logo-container {
+    position: fixed; /* Logo jest niezależne od paska nawigacyjnego */
+    top: 0;
+    left: 0;
+    z-index: 1001; /* Upewnij się, że logo jest na wierzchu */
+    padding: 20px; /* Odstęp od krawędzi */
+}
+
+/* Logo */
+#logo {
+    width: 150px; /* Stała szerokość logo */
+    height: 150px; /* Stała wysokość logo */
+    border-radius: 15px;
+}
+
+/* Pasek nawigacyjny */
+header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: flex-end; /* Zakładki są wyrównane do prawej */
+    align-items: center;
+    padding: 10px 20px;
+    background: black; /* Tło paska nawigacyjnego czarne */
+    position: fixed; /* Pasek nawigacyjny zawsze na górze */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Upewnij się, że pasek jest pod logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px; /* Zwiększony odstęp między zakładkami */
+    margin-right: 20px; /* Dodatkowy margines z prawej strony */
+}
+
+nav ul li a {
+    font-family: "Rubik";
+    text-decoration: none;
+    color: white; /* Kolor tekstu białe */
+    font-size: 40px;
+    transition: color 0.3s;
+    padding-right: 20px;
+}
+
+nav ul li a:hover {
+    color: #ff4081; /* Kolor po najechaniu różowy */
+}
+
+/* Sekcja hero (strona główna) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Wysokość sekcji równa 100% widocznego obszaru */
+    background: url('IMG/background.jpg') no-repeat center center/cover; /* Tło strony głównej */
+    margin-top: 60px; /* Margines górny, aby uniknąć nakładania na pasek nawigacyjny */
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 32px;
+}
+
+/* Sekcja produktów (realizacje) */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding-top: 80px; /* Dodatkowy padding, aby uniknąć nakładania na pasek nawigacyjny */
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: white; /* Tło produktu białe */
+    border: 1px solid #ddd; /* Ramka produktu */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cień produktu */
+    width: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.product:not(:last-child) {
+    border-bottom: 2px solid #ddd; /* Ramka między produktami */
+}
+
+.product-details h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333; /* Kolor tekstu ciemnoszary */
+}
+
+.product-details p {
+    margin: 0;
+    color: #666; /* Kolor tekstu szary */
+    font-size: 14px;
+}
+
+/* Czcionka Rubik */
+@font-face {
+    font-family: "Rubik";
+    src: url("Fonts/Rubik-VariableFont_wght.ttf");
+}
+
+/* Ukrycie scrollbara */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Włącz przewijanie tylko na stronie realizacje */
+body.allow-scroll {
+    overflow: auto; /* Włącz przewijanie */
+    height: auto; /* Usuń ograniczenie wysokości */
+}
