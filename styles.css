@@ -1,16 +1,11 @@
-/* Resetowanie domyślnych stylów */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Tło strony głównej */
+/* Wymuś stałą szerokość strony */
 body {
     font-family: Arial, sans-serif;
     color: white;
-    background: #000; /* Tło strony czarne */
-    overflow-x: hidden; /* Zapobiega przewijaniu w poziomie */
+    background: #000;
+    min-width: 1200px; /* Minimalna szerokość strony */
+    margin: 0 auto; /* Wyśrodkowanie strony */
+    overflow-x: auto; /* Włącz przewijanie w poziomie */
 }
 
 /* Kontener na logo */
@@ -18,14 +13,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1001; /* Upewnij się, że logo jest na wierzchu */
-    padding: 10px; /* Mniejszy padding na telefonach */
+    z-index: 1001;
+    padding: 10px;
 }
 
 /* Logo */
 #logo {
-    width: 100px; /* Mniejsza szerokość na telefonach */
-    height: 100px; /* Mniejsza wysokość na telefonach */
+    width: 150px;
+    height: 150px;
     border-radius: 15px;
 }
 
@@ -33,33 +28,33 @@ body {
 header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
-    justify-content: flex-end; /* Zakładki są wyrównane do prawej */
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
-    background: black; /* Tło paska nawigacyjnego czarne */
-    position: fixed; /* Pasek nawigacyjny zawsze na górze */
+    background: black;
+    position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Upewnij się, że pasek jest pod logo */
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Mniejszy odstęp na telefonach */
-    margin-right: 10px; /* Mniejszy margines */
+    gap: 60px;
+    margin-right: 20px;
 }
 
     nav ul li a {
         font-family: "Rubik";
         text-decoration: none;
-        color: white; /* Kolor tekstu białe */
-        font-size: 1.5rem; /* Mniejsza czcionka na telefonach */
+        color: white;
+        font-size: 40px;
         transition: color 0.3s;
     }
 
         nav ul li a:hover {
-            color: #ff4081; /* Kolor po najechaniu różowy */
+            color: #ff4081;
         }
 
 /* Sekcja hero (strona główna) */
@@ -69,19 +64,18 @@ nav ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Wysokość sekcji równa 100% widocznego obszaru */
-    background: url('background.jpg') no-repeat center center/cover; /* Tło strony głównej */
-    margin-top: 60px; /* Margines górny, aby uniknąć nakładania na pasek nawigacyjny */
-    padding: 20px; /* Dodatkowy padding na telefonach */
+    height: 100vh;
+    background: url('IMG/background.jpg') no-repeat center center/cover;
+    margin-top: 60px;
 }
 
     .hero h1 {
-        font-size: 4rem; /* Elastyczny rozmiar czcionki */
+        font-size: 72px;
         margin-bottom: 10px;
     }
 
     .hero p {
-        font-size: 1.5rem; /* Elastyczny rozmiar czcionki */
+        font-size: 32px;
     }
 
 /* Sekcja produktów (realizacje) */
@@ -92,25 +86,23 @@ nav ul {
     margin: 20px auto;
     max-width: 1200px;
     padding-top: 80px;
-    padding-left: 20px; /* Dodatkowy padding na telefonach */
-    padding-right: 20px; /* Dodatkowy padding na telefonach */
 }
 
 .product {
     display: grid;
-    grid-template-columns: 1fr; /* Jedna kolumna na telefonach */
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    background: white; /* Tło produktu białe */
-    border: 1px solid #ddd; /* Ramka produktu */
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cień produktu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
     .product img {
         width: 100%;
-        height: auto; /* Elastyczna wysokość */
+        height: auto;
     }
 
 .product-details {
@@ -123,50 +115,14 @@ nav ul {
     .product-details h2 {
         margin: 0 0 10px;
         font-size: 18px;
-        color: #333; /* Kolor tekstu ciemnoszary */
+        color: #333;
     }
 
     .product-details p {
         margin: 0;
-        color: #666; /* Kolor tekstu szary */
+        color: #666;
         font-size: 14px;
     }
-
-/* Media query dla telefonów */
-@media (max-width: 768px) {
-    #logo {
-        width: 80px; /* Jeszcze mniejsze logo na telefonach */
-        height: 80px;
-    }
-
-    nav ul {
-        gap: 10px; /* Jeszcze mniejszy odstęp */
-    }
-
-        nav ul li a {
-            font-size: 1.2rem; /* Mniejsza czcionka */
-        }
-
-    .hero h1 {
-        font-size: 2.5rem; /* Mniejsza czcionka na telefonach */
-    }
-
-    .hero p {
-        font-size: 1.2rem; /* Mniejsza czcionka na telefonach */
-    }
-}
-
-/* Media query dla tabletów i większych ekranów */
-@media (min-width: 768px) {
-    .product {
-        grid-template-columns: 1fr 1fr; /* Dwie kolumny na większych ekranach */
-    }
-
-    #logo {
-        width: 150px; /* Większa szerokość na większych ekranach */
-        height: 150px; /* Większa wysokość na większych ekranach */
-    }
-}
 
 /* Czcionka Rubik */
 @font-face {
@@ -177,10 +133,4 @@ nav ul {
 /* Ukrycie scrollbara */
 ::-webkit-scrollbar {
     display: none;
-}
-
-/* Włącz przewijanie tylko na stronie realizacje */
-body.allow-scroll {
-    overflow: auto; /* Włącz przewijanie */
-    height: auto; /* Usuń ograniczenie wysokości */
 }
