@@ -46,12 +46,12 @@ header {
 }
 
 #kontakt li {
-    padding: 2vh; /* Padding w jednostkach vh */
+    padding: 2; /* Padding w jednostkach vh */
 }
 
 #kontakt ul {
     list-style: none;
-    font-size: 8vh; /* Rozmiar czcionki w jednostkach vh */
+    font-size: 8vw; /* Rozmiar czcionki w jednostkach vh */
 }
 
 #kontakt a {
@@ -75,8 +75,11 @@ nav ul li a {
     font-family: "Rubik";
     text-decoration: none;
     color: white;
-    font-size: 4vh; /* Rozmiar czcionki w jednostkach vh */
+    font-size: 1.25vw; /* Rozmiar czcionki w jednostkach vh */
     transition: color 0.3s;
+    white-space: normal; /* Zezwól na zawijanie tekstu */
+    word-wrap: break-word; /* Łamanie długich słów */
+    overflow-wrap: break-word; /* Nowoczesne łamanie słów */
 }
 
 nav ul li a:hover {
@@ -91,18 +94,24 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     height: 100vh;
-    margin-top: 6vh; /* Margines górny w jednostkach vh */
+    margin-top: 1vh; /* Margines górny w jednostkach vh */
 }
 
 .hero h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 8vh; /* Rozmiar czcionki w jednostkach vh */
+    font-size:5vw; /* Rozmiar czcionki w jednostkach vh */
     margin-bottom: 1vh; /* Margines dolny w jednostkach vh */
+    white-space: normal; /* Zezwól na zawijanie tekstu */
+    word-wrap: break-word; /* Łamanie długich słów */
+    overflow-wrap: break-word; /* Nowoczesne łamanie słów */
 }
 
 .hero p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 6vh; /* Rozmiar czcionki w jednostkach vh */
+    font-size:  2.5vw; /* Rozmiar czcionki w jednostkach vh */
+    white-space: normal; /* Zezwól na zawijanie tekstu */
+    word-wrap: break-word; /* Łamanie długich słów */
+    overflow-wrap: break-word; /* Nowoczesne łamanie słów */
 }
 
 .hero a {
@@ -152,12 +161,18 @@ nav ul li a:hover {
     margin: 0 0 1vh; /* Margines dolny w jednostkach vh */
     font-size: 2vh; /* Rozmiar czcionki w jednostkach vh */
     color: #333;
+    white-space: normal; /* Zezwól na zawijanie tekstu */
+    word-wrap: break-word; /* Łamanie długich słów */
+    overflow-wrap: break-word; /* Nowoczesne łamanie słów */
 }
 
 .product-details p {
     margin: 0;
     color: #666;
     font-size: 1.4vh; /* Rozmiar czcionki w jednostkach vh */
+    white-space: normal; /* Zezwól na zawijanie tekstu */
+    word-wrap: break-word; /* Łamanie długich słów */
+    overflow-wrap: break-word; /* Nowoczesne łamanie słów */
 }
 
 /* Czcionka Rubik */
@@ -193,4 +208,4 @@ nav ul li a:hover {
     .hero {
         margin-top: 16vh; /* 10% wyżej (6vh + 10vh) */
     }
-}   
+}
