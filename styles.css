@@ -1,9 +1,16 @@
-/* Wymuś stałą szerokość strony */
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tło strony głównej */
 body {
     font-family: Arial, sans-serif;
     color: white;
     background: #000;
-    min-width: 1200px; /* Minimalna szerokość strony */
+    min-width: 80vw; /* Minimalna szerokość strony */
     margin: 0 auto; /* Wyśrodkowanie strony */
     overflow-x: auto; /* Włącz przewijanie w poziomie */
 }
@@ -14,14 +21,14 @@ body {
     top: 0;
     left: 0;
     z-index: 1001;
-    padding: 10px;
+    padding: 1vh 1vw; /* Padding w jednostkach vh i vw */
 }
 
 /* Logo */
 #logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
+    width: 8vw; /* Szerokość logo w jednostkach vw */
+    height: 12vh; /* Wysokość logo w jednostkach vh */
+    border-radius: 1.5vh; /* Zaokrąglenie rogów w jednostkach vh */
 }
 
 /* Pasek nawigacyjny */
@@ -30,7 +37,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1vh 2vw; /* Padding w jednostkach vh i vw */
     background: black;
     position: fixed;
     width: 100%;
@@ -38,24 +45,43 @@ header {
     z-index: 1000;
 }
 
+#kontakt li {
+    padding: 2vh; /* Padding w jednostkach vh */
+}
+
+#kontakt ul {
+    list-style: none;
+    font-size: 8vh; /* Rozmiar czcionki w jednostkach vh */
+}
+
+#kontakt a {
+    color: white;
+    text-decoration: none;
+}
+
+#kontakt a:hover {
+    color: #ff4081;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 60px;
-    margin-right: 20px;
+    gap: 4vw; /* Odstęp między elementami w jednostkach vw */
+    margin-right: 2vw; /* Margines w jednostkach vw */
+    padding: 0.75vw;
 }
 
-    nav ul li a {
-        font-family: "Rubik";
-        text-decoration: none;
-        color: white;
-        font-size: 40px;
-        transition: color 0.3s;
-    }
+nav ul li a {
+    font-family: "Rubik";
+    text-decoration: none;
+    color: white;
+    font-size: 4vh; /* Rozmiar czcionki w jednostkach vh */
+    transition: color 0.3s;
+}
 
-        nav ul li a:hover {
-            color: #ff4081;
-        }
+nav ul li a:hover {
+    color: #ff4081;
+}
 
 /* Sekcja hero (strona główna) */
 .hero {
@@ -65,27 +91,32 @@ nav ul {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background: url('IMG/background.jpg') no-repeat center center/cover;
-    margin-top: 60px;
+    margin-top: 6vh; /* Margines górny w jednostkach vh */
 }
 
-    .hero h1 {
-        font-size: 72px;
-        margin-bottom: 10px;
-    }
+.hero h1 {
+    font-size: 8vh; /* Rozmiar czcionki w jednostkach vh */
+    margin-bottom: 1vh; /* Margines dolny w jednostkach vh */
+}
 
-    .hero p {
-        font-size: 32px;
-    }
-
-/* Sekcja produktów (realizacje) */
+.hero p {
+    font-size: 6vh; /* Rozmiar czcionki w jednostkach vh */
+}
+.hero a {
+    color: white;
+    text-decoration: none;
+}
+.hero a:hover {
+    color:  #ff4081;
+    
+}
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding-top: 80px;
+    gap: 2vh; /* Odstęp między elementami w jednostkach vh */
+    margin: 2vh auto; /* Margines w jednostkach vh */
+    max-width: 80vw; /* Maksymalna szerokość w jednostkach vw */
+    padding-top: 8vh; /* Padding górny w jednostkach vh */
 }
 
 .product {
@@ -93,36 +124,36 @@ nav ul {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 0.1vh solid #ddd; /* Grubość ramki w jednostkach vh */
+    border-radius: 0.5vh; /* Zaokrąglenie rogów w jednostkach vh */
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, 0.1); /* Cień w jednostkach vh */
     width: 100%;
 }
 
-    .product img {
-        width: 100%;
-        height: auto;
-    }
+.product img {
+    width: 100%;
+    height: auto;
+}
 
 .product-details {
-    padding: 15px;
+    padding: 1.5vh; /* Padding w jednostkach vh */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-    .product-details h2 {
-        margin: 0 0 10px;
-        font-size: 18px;
-        color: #333;
-    }
+.product-details h2 {
+    margin: 0 0 1vh; /* Margines dolny w jednostkach vh */
+    font-size: 2vh; /* Rozmiar czcionki w jednostkach vh */
+    color: #333;
+}
 
-    .product-details p {
-        margin: 0;
-        color: #666;
-        font-size: 14px;
-    }
+.product-details p {
+    margin: 0;
+    color: #666;
+    font-size: 1.4vh; /* Rozmiar czcionki w jednostkach vh */
+}
 
 /* Czcionka Rubik */
 @font-face {
