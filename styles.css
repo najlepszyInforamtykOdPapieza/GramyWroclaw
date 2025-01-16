@@ -104,14 +104,16 @@ nav ul li a:hover {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 6vh; /* Rozmiar czcionki w jednostkach vh */
 }
+
 .hero a {
     color: white;
-    text-decoration: none   ;
+    text-decoration: none;
 }
+
 .hero a:hover {
-    color:  #ff4081;
-    
+    color: #ff4081;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -168,3 +170,27 @@ nav ul li a:hover {
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* Media query dla telefonów */
+@media (max-width: 768px) {
+    /* Ukryj logo na telefonach */
+    #logo-container {
+        display: none;
+    }
+
+    /* Pasek nawigacyjny w jednej linii */
+    nav ul {
+        gap: 2vw; /* Mniejszy odstęp między elementami */
+        margin-right: 1vw; /* Mniejszy margines */
+        padding: 0.5vw; /* Mniejszy padding */
+    }
+
+    nav ul li a {
+        font-size: 2.5vh; /* Mniejsza czcionka na telefonach */
+    }
+
+    /* Przesuń sekcję hero 10% wyżej */
+    .hero {
+        margin-top: 16vh; /* 10% wyżej (6vh + 10vh) */
+    }
+}   
