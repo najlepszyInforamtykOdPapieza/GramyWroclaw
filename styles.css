@@ -44,9 +44,19 @@ header {
     top: 0;
     z-index: 1000;
 }
-
+#kontakt{
+    text-align: left;
+    margin-top: 5vh;
+}
+#kontakt h1{
+    font-size: 3vw;
+    padding: 1vw;
+}
+#kontakt p{
+    font-size: 1vw;
+}
 #kontakt li {
-    padding: 2; /* Padding w jednostkach vh */
+    padding: 0.5vh; /* Padding w jednostkach vh */
 }
 
 #kontakt ul {
@@ -57,6 +67,11 @@ header {
 #kontakt a {
     color: white;
     text-decoration: none;
+    font-size: 4vw;
+}
+#kontakt img{
+    margin: 0.1vw;
+    border-radius: 0.2vh;
 }
 
 #kontakt a:hover {
@@ -94,7 +109,7 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     height: 100vh;
-    margin-top: 1vh; /* Margines górny w jednostkach vh */
+    margin-top: 3vh; /* Margines górny w jednostkach vh */
 }
 
 .hero h1 {
@@ -134,10 +149,9 @@ nav ul li a:hover {
 
 .product {
     display: grid;
-    background-color: #333;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background: white;
+    background: #333;
     border: 0.1vh solid #ddd; /* Grubość ramki w jednostkach vh */
     border-radius: 0.5vh; /* Zaokrąglenie rogów w jednostkach vh */
     overflow: hidden;
@@ -151,6 +165,7 @@ nav ul li a:hover {
 }
 
 .product-details {
+    background-color: #333;
     padding: 1.5vh; /* Padding w jednostkach vh */
     display: flex;
     flex-direction: column;
@@ -160,7 +175,7 @@ nav ul li a:hover {
 .product-details h2 {
     margin: 0 0 1vh; /* Margines dolny w jednostkach vh */
     font-size: 2vh; /* Rozmiar czcionki w jednostkach vh */
-    color: #333;
+    color: white;
     white-space: normal; /* Zezwól na zawijanie tekstu */
     word-wrap: break-word; /* Łamanie długich słów */
     overflow-wrap: break-word; /* Nowoczesne łamanie słów */
@@ -168,7 +183,7 @@ nav ul li a:hover {
 
 .product-details p {
     margin: 0;
-    color: #666;
+    color: white;
     font-size: 1.4vh; /* Rozmiar czcionki w jednostkach vh */
     white-space: normal; /* Zezwól na zawijanie tekstu */
     word-wrap: break-word; /* Łamanie długich słów */
@@ -206,6 +221,6 @@ nav ul li a:hover {
 
     /* Przesuń sekcję hero 10% wyżej */
     .hero {
-        margin-top: 16vh; /* 10% wyżej (6vh + 10vh) */
+        margin-top: 3vh; /* 10% wyżej (6vh + 10vh) */
     }
 }
